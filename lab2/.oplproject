@@ -3,7 +3,25 @@
     <version>1.0</version>
     	
     <configs>
-	</configs>
+        		
+        <config default="true" name="Qa" category="opl">
+            			
+            <ref name="P2.mod" type="model">
+			</ref>
+            			
+            <ref name="P2.dat" type="data">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="MAIN" category="opl">
+            			
+            <ref name="P2_main.mod" type="model">
+			</ref>
+            		
+        </config>
+        	
+    </configs>
     	
 
 </project>
