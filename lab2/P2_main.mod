@@ -3,7 +3,7 @@ main {
 	var def = new IloOplModelDefinition(src);
 	var cplex = new IloCplex();
 	var model = new IloOplModel(def,cplex);
-	var data = new IloOplDataSource("P2.dat");
+	var data = new IloOplDataSource("P2e.dat");
 	model.addDataSource(data);
 	model.generate();
 	cplex.epgap=0.01;

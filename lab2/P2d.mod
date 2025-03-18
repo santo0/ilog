@@ -1,13 +1,12 @@
 int nTasks=...;
 int nCPUs=...;
-//int K=...;
+int K=...;
 range T=1..nTasks;
 range C=1..nCPUs;
 float rt[t in T]=...;
 float rc[c in C]=...;
 dvar boolean x_tc[t in T, c in C]; //binary dvar
-dvar boolean ut[t in T];
-//dvar float+ z;
+dvar float+ z;
 
 
 execute {
@@ -20,24 +19,24 @@ execute {
 	for (var c=1;c<=nCPUs;c++) 
 		totalCapacity+=rc[c];
 	writeln("Total capacity "+ totalCapacity);
+	writeln("K " + K);
 	writeln("nTasks " + nTasks);	
 };
 
 // Objective
-//minimize z;
-minimize sum(t in T)rt[t]*ut[t];
+minimize z;
 subject to{
 	// Constraint 1
 	forall(t in T)
-		sum(c in C) x_tc[t,c] + ut[t] == 1;
+		sum(c in C) x_tc[t,c] <= 1;
 	// Constraint 2
 	forall(c in C)
 		sum(t in T) rt[t]* x_tc[t,c] <= rc[c];
 	// Constraint 3
-	//forall(c in C)
-	//	z >= (1/rc[c])*sum(t in T) rt[t]* x_tc[t,c];
+	forall(c in C)
+		z >= (1/rc[c])*sum(t in T) rt[t]* x_tc[t,c];
 	// Constraint 4
-	//	nTasks-sum(t in T, c in C) x_tc[t,c] <= K;
+		nTasks-sum(t in T, c in C) x_tc[t,c] <= K;
 }
 
 execute {
