@@ -8,15 +8,32 @@
             			
             <ref name="P2.mod" type="model">
 			</ref>
-            			
-            <ref name="P2d.dat" type="data">
-			</ref>
             		
         </config>
         		
         <config default="false" name="MAIN" category="opl">
             			
             <ref name="P2_main.mod" type="model">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="Qd" category="opl">
+            			
+            <ref name="P2d.mod" type="model">
+			</ref>
+            			
+            <ref name="P2d.dat" type="data">
+			</ref>
+            		
+        </config>
+        		
+        <config default="false" name="Qe" category="opl">
+            			
+            <ref name="P2e.mod" type="model">
+			</ref>
+            			
+            <ref name="P2e.dat" type="data">
 			</ref>
             		
         </config>
