@@ -6,7 +6,7 @@
         		
         <config default="true" name="questionA" category="opl">
             			
-            <ref name="models/P3a.mod" type="model">
+            <ref name="models/P3.mod" type="model">
 			</ref>
             			
             <ref name="data/qa.dat" type="data">
