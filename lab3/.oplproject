@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?><project>
+    	
+    <version>1.0</version>
+    	
+    <configs>
+        		
+        <config default="true" name="questionA" category="opl">
+            			
+            <ref name="models/P3a.mod" type="model">
+			</ref>
+            			
+            <ref name="data/qa.dat" type="data">
+			</ref>
+            		
+        </config>
+        	
+    </configs>
+    	
+
+</project>
