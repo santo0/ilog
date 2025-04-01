@@ -25,7 +25,7 @@ from AMMMGlobals import AMMMException
 
 def run():
     try:
-        configFile = "InstanceGeneratorP3/config/config.dat"
+        configFile = "InstanceGeneratorP3/config/config_small.dat"
         print("AMMM Instance Generator")
         print("-----------------------")
         print("Reading Config file %s..." % configFile)

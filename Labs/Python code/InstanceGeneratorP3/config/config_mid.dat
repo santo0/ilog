@@ -1,5 +1,5 @@
 # file name: ../AMMMLabHeuristics/data/instance_XX.dat
-instancesDirectory = output;
+instancesDirectory = InstanceGeneratorP3/output;
 fileNamePrefix = mid;
 fileNameExtension = dat;
 numInstances = 1;
